@@ -10,16 +10,6 @@
 
 @implementation DDCoverData
 
-- (instancetype)initWithDictionary:(NSDictionary *)dict;
-{
-    self = [super initWithDictionary:dict];
-    if (self) {
-        self.title = dict[@"title"];
-        self.subtitle = dict[@"subtitle"];
-    }
-    return self;
-}
-
 @end
 
 @interface DDCoverPage ()
@@ -40,7 +30,7 @@
     NSMutableArray *dataArray = [NSMutableArray array];
     for (NSDictionary *item in self.pageDataArray) {
         if ([item[@"layout"] isEqualToString:@"cover"]) {
-            DDCoverData *data = [[DDCoverData alloc] initWithDictionary:item];
+            DDCoverData *data = [[DDCoverData alloc] initWithDictionary:item error:nil];
             [dataArray addObject:data];
         }
     }
@@ -54,13 +44,23 @@
 {
     [super loadView];
     self.titleLabel = [UILabel labelWithFont:[UIFont systemFontOfSize:48.0] textColor:[UIColor blackColor]];
+    self.titleLabel.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:self.titleLabel];
     self.subtitleLabel = [UILabel labelWithFont:[UIFont systemFontOfSize:48.0] textColor:[UIColor blackColor]];
+    self.subtitleLabel.textAlignment = NSTextAlignmentCenter;
     [self.view addSubview:self.subtitleLabel];
 }
 
 - (void)configConstraints;
 {
+    [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view);
+        make.centerY.equalTo(self.view).with.offset(-30);
+    }];
+    [self.subtitleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(self.view);
+        make.centerY.equalTo(self.view).with.offset(30);
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

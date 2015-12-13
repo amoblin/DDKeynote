@@ -10,12 +10,6 @@
 
 @implementation DDBaseData
 
-- (instancetype)initWithDictionary:(NSDictionary *)dict;
-{
-    self = [super init];
-    return self;
-}
-
 @end
 
 @interface DDBasePage ()

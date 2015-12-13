@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "UILabel+WA.h"
+#import <JSONModel/JSONModel.h>
+#import <Masonry/Masonry.h>
 
-@interface DDBaseData : NSObject
+@interface DDBaseData : JSONModel
 
-- (instancetype)initWithDictionary:(NSDictionary *)dict;
 @end
 
 @interface DDBasePage : UIViewController

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D6DF4967D806F65D8A75FF10 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE414B1B1707F3430C0518D6 /* Pods.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		87D014EF3EE457B1FC878DD2 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F429E2E1B9EFC68BD21397A /* Pods.framework */; };
 		DA5F12641C1E288600EF1261 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5F12631C1E288600EF1261 /* main.m */; };
 		DA5F12671C1E288600EF1261 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5F12661C1E288600EF1261 /* AppDelegate.m */; };
 		DA5F126A1C1E288600EF1261 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5F12691C1E288600EF1261 /* ViewController.m */; };
@@ -41,6 +41,7 @@
 /* Begin PBXFileReference section */
 		4205792E503BD59FF2EF2B1D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7CF7F7019185008E1CFDBFCD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		9F429E2E1B9EFC68BD21397A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5F125F1C1E288600EF1261 /* DDKeynote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDKeynote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5F12631C1E288600EF1261 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DA5F12651C1E288600EF1261 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -63,7 +64,6 @@
 		DA5F12A31C1E2B2800EF1261 /* DDCoverPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCoverPage.m; sourceTree = "<group>"; };
 		DA5F12A61C1E2B5400EF1261 /* UILabel+WA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+WA.h"; sourceTree = "<group>"; };
 		DA5F12A71C1E2B5400EF1261 /* UILabel+WA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+WA.m"; sourceTree = "<group>"; };
-		EE414B1B1707F3430C0518D6 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6DF4967D806F65D8A75FF10 /* Pods.framework in Frameworks */,
+				87D014EF3EE457B1FC878DD2 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +95,7 @@
 		01D60BDB3906DF6E01558CE2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EE414B1B1707F3430C0518D6 /* Pods.framework */,
+				9F429E2E1B9EFC68BD21397A /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
