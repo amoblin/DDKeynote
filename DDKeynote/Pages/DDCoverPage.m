@@ -16,7 +16,6 @@
 
 @property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) UILabel *subtitleLabel;
-@property (nonatomic, strong) NSArray *pageDataArray;
 @end
 
 @implementation DDCoverPage
@@ -24,18 +23,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.pageDataArray = @[
-                           @{@"title": @"Title", @"subtitle": @"Subtitle", @"layout": @"cover"}];
-    
-    NSMutableArray *dataArray = [NSMutableArray array];
-    for (NSDictionary *item in self.pageDataArray) {
-        if ([item[@"layout"] isEqualToString:@"cover"]) {
-            DDCoverData *data = [[DDCoverData alloc] initWithDictionary:item error:nil];
-            [dataArray addObject:data];
-        }
-    }
-    self.pageDataArray = dataArray;
-
     [self loadData];
     [self configConstraints];
 }
@@ -80,9 +67,10 @@
 
 - (void)loadData;
 {
+    
     NSInteger index = [self.navigationController.viewControllers indexOfObject:self];
-    if (index < self.pageDataArray.count) {
-        self.data = self.pageDataArray[index];
+    if (index < self.dataArray.count) {
+        self.data = self.dataArray[index];
     }
 
     if (self.data == nil) {

@@ -17,8 +17,20 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    NSArray *dataDictArray = @[
+                               @{@"title": @"Title", @"subtitle": @"Subtitle", @"layout": @"cover"}];
+    
+    
+    NSMutableArray *dataArray = [NSMutableArray array];
+    for (NSDictionary *item in dataDictArray) {
+        if ([item[@"layout"] isEqualToString:@"cover"]) {
+            DDCoverData *data = [[DDCoverData alloc] initWithDictionary:item error:nil];
+            [dataArray addObject:data];
+        }
+    }
     // Override point for customization after application launch.
     DDCoverPage *page = [[DDCoverPage alloc] init];
+    page.dataArray = dataArray;
     UINavigationController *controller = [[UINavigationController alloc] initWithRootViewController:page];
     self.window.rootViewController = controller;
     return YES;

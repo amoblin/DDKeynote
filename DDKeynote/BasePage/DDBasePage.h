@@ -19,6 +19,6 @@
 
 @property (nonatomic, strong) id data;
 
-- (DDBasePage *)pageByData:(id)data;
+@property (nonatomic, strong) NSArray *dataArray;
 
 @end

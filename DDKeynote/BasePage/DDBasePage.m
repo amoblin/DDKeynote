@@ -7,6 +7,7 @@
 //
 
 #import "DDBasePage.h"
+#import "DDCoverPage.h"
 
 @implementation DDBaseData
 
@@ -23,6 +24,7 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     [self.navigationController.navigationBar setHidden:YES];
+    [self addNextPageAction];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,7 +42,7 @@
 }
 */
 
-- (DDBasePage *)pageByData:(id)data;
+- (Class)pageByData:(id)data;
 {
     Class dataClass = [data class];
     NSString *dataClassName = NSStringFromClass(dataClass);
@@ -55,6 +57,39 @@
         pageClass = [DDBasePage class];
     }
     return pageClass;
+}
+
+- (void)addNextPageAction;
+{
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapViewAction:)];
+    self.view.userInteractionEnabled = YES;
+    [self.view addGestureRecognizer:tap];
+}
+
+- (void)tapViewAction:(UITapGestureRecognizer *)tap;
+{
+    [self pushToNextPage];
+}
+
+- (void)pushToNextPage;
+{
+    DDBaseData *data;
+    NSInteger index = [self.navigationController.viewControllers indexOfObject:self];
+    index++;
+    if (index < self.dataArray.count) {
+        data = self.dataArray[index];
+    }
+    
+    if (data == nil) {
+        return;
+    }
+    
+    Class pageClass = [self pageByData:data];
+
+    DDBasePage *page = [[pageClass alloc] init];
+    page.dataArray = self.dataArray;
+    
+    [self.navigationController pushViewController:page animated:YES];
 }
 
 @end
