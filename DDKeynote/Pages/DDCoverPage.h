@@ -8,6 +8,13 @@
 
 #import "DDBasePage.h"
 
+@interface DDCoverData : DDBaseData
+
+@property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) NSString *subtitle;
+
+@end
+
 @interface DDCoverPage : DDBasePage
 
 @end

@@ -9,6 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "UILabel+WA.h"
 
+@interface DDBaseData : NSObject
+
+- (instancetype)initWithDictionary:(NSDictionary *)dict;
+@end
+
 @interface DDBasePage : UIViewController
+
+@property (nonatomic, strong) id data;
+
+- (DDBasePage *)pageByData:(id)data;
 
 @end

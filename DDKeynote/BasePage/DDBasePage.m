@@ -8,6 +8,16 @@
 
 #import "DDBasePage.h"
 
+@implementation DDBaseData
+
+- (instancetype)initWithDictionary:(NSDictionary *)dict;
+{
+    self = [super init];
+    return self;
+}
+
+@end
+
 @interface DDBasePage ()
 
 @end
@@ -35,5 +45,22 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (DDBasePage *)pageByData:(id)data;
+{
+    Class dataClass = [data class];
+    NSString *dataClassName = NSStringFromClass(dataClass);
+    NSString *pageClassName = nil;
+    if([dataClassName hasSuffix:@"Data"]) {
+        pageClassName = [[dataClassName substringToIndex:dataClassName.length-@"Data".length] stringByAppendingString:@"Page"];
+    }
+    Class pageClass;
+    if (pageClassName && NSClassFromString(pageClassName)) {
+        pageClass = NSClassFromString(pageClassName);
+    } else {
+        pageClass = [DDBasePage class];
+    }
+    return pageClass;
+}
 
 @end
