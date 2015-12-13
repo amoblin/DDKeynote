@@ -23,7 +23,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self loadData];
     [self configConstraints];
 }
 
@@ -67,12 +66,7 @@
 
 - (void)loadData;
 {
-    
-    NSInteger index = [self.navigationController.viewControllers indexOfObject:self];
-    if (index < self.dataArray.count) {
-        self.data = self.dataArray[index];
-    }
-
+    [super loadData];
     if (self.data == nil) {
         return;
     }

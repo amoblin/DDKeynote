@@ -15,16 +15,30 @@
 
 @interface DDBasePage ()
 
+@property (nonatomic, strong) NSArray *dataArray;
+
 @end
 
 @implementation DDBasePage
+
+- (instancetype)initWithDataArray:(NSArray *)dataArray;
+{
+    self = [super init];
+    if (self) {
+        self.dataArray = dataArray;
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     [self.navigationController.navigationBar setHidden:YES];
+
     [self addNextPageAction];
+
+    [self loadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -90,6 +104,14 @@
     page.dataArray = self.dataArray;
     
     [self.navigationController pushViewController:page animated:YES];
+}
+
+- (void)loadData;
+{
+    NSInteger index = [self.navigationController.viewControllers indexOfObject:self];
+    if (index < self.dataArray.count) {
+        self.data = self.dataArray[index];
+    }
 }
 
 @end

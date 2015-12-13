@@ -19,6 +19,7 @@
 
 @property (nonatomic, strong) id data;
 
-@property (nonatomic, strong) NSArray *dataArray;
+- (instancetype)initWithDataArray:(NSArray *)dataArray;
 
+- (void)loadData;
 @end
