@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "DDCoverPage.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    DDCoverPage *page = [[DDCoverPage alloc] init];
+    UINavigationController *controller = [[UINavigationController alloc] initWithRootViewController:page];
+    self.window.rootViewController = controller;
     return YES;
 }
 

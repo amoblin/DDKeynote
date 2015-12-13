@@ -15,6 +15,9 @@
 		DA5F12721C1E288600EF1261 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA5F12701C1E288600EF1261 /* LaunchScreen.storyboard */; };
 		DA5F127D1C1E288600EF1261 /* DDKeynoteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5F127C1C1E288600EF1261 /* DDKeynoteTests.m */; };
 		DA5F12881C1E288700EF1261 /* DDKeynoteUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5F12871C1E288700EF1261 /* DDKeynoteUITests.m */; };
+		DA5F129C1C1E296B00EF1261 /* DDBasePage.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5F129B1C1E296B00EF1261 /* DDBasePage.m */; };
+		DA5F12A41C1E2B2800EF1261 /* DDCoverPage.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5F12A31C1E2B2800EF1261 /* DDCoverPage.m */; };
+		DA5F12A81C1E2B5400EF1261 /* UILabel+WA.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5F12A71C1E2B5400EF1261 /* UILabel+WA.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,12 @@
 		DA5F12831C1E288600EF1261 /* DDKeynoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DDKeynoteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5F12871C1E288700EF1261 /* DDKeynoteUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDKeynoteUITests.m; sourceTree = "<group>"; };
 		DA5F12891C1E288700EF1261 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA5F129A1C1E296B00EF1261 /* DDBasePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDBasePage.h; sourceTree = "<group>"; };
+		DA5F129B1C1E296B00EF1261 /* DDBasePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDBasePage.m; sourceTree = "<group>"; };
+		DA5F12A21C1E2B2800EF1261 /* DDCoverPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCoverPage.h; sourceTree = "<group>"; };
+		DA5F12A31C1E2B2800EF1261 /* DDCoverPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCoverPage.m; sourceTree = "<group>"; };
+		DA5F12A61C1E2B5400EF1261 /* UILabel+WA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+WA.h"; sourceTree = "<group>"; };
+		DA5F12A71C1E2B5400EF1261 /* UILabel+WA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+WA.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +110,9 @@
 		DA5F12611C1E288600EF1261 /* DDKeynote */ = {
 			isa = PBXGroup;
 			children = (
+				DA5F12A51C1E2B4000EF1261 /* Utils */,
+				DA5F12991C1E296B00EF1261 /* BasePage */,
+				DA5F12A11C1E2B2800EF1261 /* Pages */,
 				DA5F12651C1E288600EF1261 /* AppDelegate.h */,
 				DA5F12661C1E288600EF1261 /* AppDelegate.m */,
 				DA5F12681C1E288600EF1261 /* ViewController.h */,
@@ -138,6 +150,33 @@
 				DA5F12891C1E288700EF1261 /* Info.plist */,
 			);
 			path = DDKeynoteUITests;
+			sourceTree = "<group>";
+		};
+		DA5F12991C1E296B00EF1261 /* BasePage */ = {
+			isa = PBXGroup;
+			children = (
+				DA5F129A1C1E296B00EF1261 /* DDBasePage.h */,
+				DA5F129B1C1E296B00EF1261 /* DDBasePage.m */,
+			);
+			path = BasePage;
+			sourceTree = "<group>";
+		};
+		DA5F12A11C1E2B2800EF1261 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				DA5F12A21C1E2B2800EF1261 /* DDCoverPage.h */,
+				DA5F12A31C1E2B2800EF1261 /* DDCoverPage.m */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		DA5F12A51C1E2B4000EF1261 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DA5F12A61C1E2B5400EF1261 /* UILabel+WA.h */,
+				DA5F12A71C1E2B5400EF1261 /* UILabel+WA.m */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +311,9 @@
 			files = (
 				DA5F126A1C1E288600EF1261 /* ViewController.m in Sources */,
 				DA5F12671C1E288600EF1261 /* AppDelegate.m in Sources */,
+				DA5F12A81C1E2B5400EF1261 /* UILabel+WA.m in Sources */,
+				DA5F12A41C1E2B2800EF1261 /* DDCoverPage.m in Sources */,
+				DA5F129C1C1E296B00EF1261 /* DDBasePage.m in Sources */,
 				DA5F12641C1E288600EF1261 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +456,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DDKeynote/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.marboo.DDKeynote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -425,6 +468,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = DDKeynote/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.marboo.DDKeynote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -498,6 +542,7 @@
 				DA5F128E1C1E288700EF1261 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DA5F128F1C1E288700EF1261 /* Build configuration list for PBXNativeTarget "DDKeynoteTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +551,7 @@
 				DA5F12911C1E288700EF1261 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DA5F12921C1E288700EF1261 /* Build configuration list for PBXNativeTarget "DDKeynoteUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +560,7 @@
 				DA5F12941C1E288700EF1261 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
