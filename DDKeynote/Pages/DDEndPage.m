@@ -40,6 +40,7 @@
 
 - (void)configConstraints;
 {
+    [super configConstraints];
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.centerX.equalTo(self.view);
         make.centerY.equalTo(self.view);

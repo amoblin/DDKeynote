@@ -17,6 +17,8 @@
 
 @property (nonatomic, strong) NSArray *dataArray;
 
+@property (nonatomic, strong) UILabel *label;
+
 @end
 
 @implementation DDBasePage
@@ -36,31 +38,31 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [self.navigationController.navigationBar setHidden:YES];
 
-    [self addNextPageAction];
+    [self addPreviousNextPageAction];
 
     [self loadData];
     [self configConstraints];
 }
 
+- (void)loadView;
+{
+    [super loadView];
+    self.label = [UILabel labelWithFont:[UIFont systemFontOfSize:10] textColor:[UIColor lightGrayColor]];
+    [self.view addSubview:self.label];
+}
+
 - (void)configConstraints;
 {
-    // do nothing
+    [self.label mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.right.mas_equalTo(-20);
+        make.bottom.mas_equalTo(-15);
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (Class)pageByData:(id)data;
 {
@@ -79,16 +81,39 @@
     return pageClass;
 }
 
-- (void)addNextPageAction;
+- (void)addPreviousNextPageAction;
 {
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapViewAction:)];
     self.view.userInteractionEnabled = YES;
+
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapViewAction:)];
     [self.view addGestureRecognizer:tap];
+    
+    UISwipeGestureRecognizer *swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeViewAction:)];
+    swipe.direction = UISwipeGestureRecognizerDirectionLeft | UISwipeGestureRecognizerDirectionRight;
+    [self.view addGestureRecognizer:swipe];
+    
+    swipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeViewAction:)];
+    swipe.direction = UISwipeGestureRecognizerDirectionRight;
+    [self.view addGestureRecognizer:swipe];
 }
 
 - (void)tapViewAction:(UITapGestureRecognizer *)tap;
 {
     [self pushToNextPage];
+}
+
+- (void)swipeViewAction:(UISwipeGestureRecognizer *)swipe;
+{
+    if (swipe.direction & UISwipeGestureRecognizerDirectionLeft) {
+        [self pushToNextPage];
+    } else if (swipe.direction & UISwipeGestureRecognizerDirectionRight) {
+        [self popToPreviousPage];
+    }
+}
+
+- (void)popToPreviousPage;
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)pushToNextPage;
@@ -118,6 +143,9 @@
     if (index < self.dataArray.count) {
         self.data = self.dataArray[index];
     }
+    
+    NSString *info = [NSString stringWithFormat:@"%@-%@", @(self.dataArray.count), @(index+1)];
+    self.label.text = info;
 }
 
 @end

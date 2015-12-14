@@ -39,6 +39,7 @@
 
 - (void)configConstraints;
 {
+    [super configConstraints];
     [self.contentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.top.bottom.equalTo(self.view);
     }];
