@@ -46,6 +46,7 @@
     }
     // Override point for customization after application launch.
     DDCoverPage *page = [[DDCoverPage alloc] initWithDataArray:dataArray];
+    page.data = dataArray[0];
     UINavigationController *controller = [[UINavigationController alloc] initWithRootViewController:page];
     self.window.rootViewController = controller;
     return YES;

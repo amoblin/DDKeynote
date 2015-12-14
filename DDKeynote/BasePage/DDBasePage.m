@@ -133,17 +133,15 @@
 
     DDBasePage *page = [[pageClass alloc] init];
     page.dataArray = self.dataArray;
-    
+    page.data = data;
+
     [self.navigationController pushViewController:page animated:YES];
 }
 
 - (void)loadData;
 {
     NSInteger index = [self.navigationController.viewControllers indexOfObject:self];
-    if (index < self.dataArray.count) {
-        self.data = self.dataArray[index];
-    }
-    
+
     NSString *info = [NSString stringWithFormat:@"%@-%@", @(self.dataArray.count), @(index+1)];
     self.label.text = info;
 }
