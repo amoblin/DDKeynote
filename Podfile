@@ -11,5 +11,6 @@ source "https://github.com/CocoaPods/Specs.git"
 pod "ReactiveCocoa"
 pod "Masonry"
 pod "JSONModel"
+pod "SVProgressHUD"
 
 use_frameworks!

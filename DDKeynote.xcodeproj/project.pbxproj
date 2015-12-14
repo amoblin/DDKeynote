@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		87D014EF3EE457B1FC878DD2 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F429E2E1B9EFC68BD21397A /* Pods.framework */; };
+		DA2729581C1E3C1700BFBF01 /* DDDetailPage.m in Sources */ = {isa = PBXBuildFile; fileRef = DA2729571C1E3C1700BFBF01 /* DDDetailPage.m */; };
+		DA27295B1C1E3C2800BFBF01 /* DDListPage.m in Sources */ = {isa = PBXBuildFile; fileRef = DA27295A1C1E3C2800BFBF01 /* DDListPage.m */; };
+		DA27295E1C1E3C3300BFBF01 /* DDEndPage.m in Sources */ = {isa = PBXBuildFile; fileRef = DA27295D1C1E3C3300BFBF01 /* DDEndPage.m */; };
 		DA5F12641C1E288600EF1261 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5F12631C1E288600EF1261 /* main.m */; };
 		DA5F12671C1E288600EF1261 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5F12661C1E288600EF1261 /* AppDelegate.m */; };
 		DA5F126A1C1E288600EF1261 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5F12691C1E288600EF1261 /* ViewController.m */; };
@@ -42,6 +45,12 @@
 		4205792E503BD59FF2EF2B1D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		7CF7F7019185008E1CFDBFCD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		9F429E2E1B9EFC68BD21397A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA2729561C1E3C1700BFBF01 /* DDDetailPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDDetailPage.h; sourceTree = "<group>"; };
+		DA2729571C1E3C1700BFBF01 /* DDDetailPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDDetailPage.m; sourceTree = "<group>"; };
+		DA2729591C1E3C2800BFBF01 /* DDListPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDListPage.h; sourceTree = "<group>"; };
+		DA27295A1C1E3C2800BFBF01 /* DDListPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDListPage.m; sourceTree = "<group>"; };
+		DA27295C1C1E3C3300BFBF01 /* DDEndPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDEndPage.h; sourceTree = "<group>"; };
+		DA27295D1C1E3C3300BFBF01 /* DDEndPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDEndPage.m; sourceTree = "<group>"; };
 		DA5F125F1C1E288600EF1261 /* DDKeynote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDKeynote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5F12631C1E288600EF1261 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DA5F12651C1E288600EF1261 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -190,6 +199,12 @@
 			children = (
 				DA5F12A21C1E2B2800EF1261 /* DDCoverPage.h */,
 				DA5F12A31C1E2B2800EF1261 /* DDCoverPage.m */,
+				DA2729561C1E3C1700BFBF01 /* DDDetailPage.h */,
+				DA2729571C1E3C1700BFBF01 /* DDDetailPage.m */,
+				DA2729591C1E3C2800BFBF01 /* DDListPage.h */,
+				DA27295A1C1E3C2800BFBF01 /* DDListPage.m */,
+				DA27295C1C1E3C3300BFBF01 /* DDEndPage.h */,
+				DA27295D1C1E3C3300BFBF01 /* DDEndPage.m */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -384,11 +399,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA27295B1C1E3C2800BFBF01 /* DDListPage.m in Sources */,
 				DA5F126A1C1E288600EF1261 /* ViewController.m in Sources */,
+				DA27295E1C1E3C3300BFBF01 /* DDEndPage.m in Sources */,
 				DA5F12671C1E288600EF1261 /* AppDelegate.m in Sources */,
 				DA5F12A81C1E2B5400EF1261 /* UILabel+WA.m in Sources */,
 				DA5F12A41C1E2B2800EF1261 /* DDCoverPage.m in Sources */,
 				DA5F129C1C1E296B00EF1261 /* DDBasePage.m in Sources */,
+				DA2729581C1E3C1700BFBF01 /* DDDetailPage.m in Sources */,
 				DA5F12641C1E288600EF1261 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

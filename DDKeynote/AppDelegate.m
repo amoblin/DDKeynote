@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 #import "DDCoverPage.h"
+#import "DDEndPage.h"
+#import "DDListPage.h"
+#import "DDDetailPage.h"
 
 @interface AppDelegate ()
 
@@ -18,13 +21,26 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     NSArray *dataDictArray = @[
-                               @{@"title": @"Title", @"subtitle": @"Subtitle", @"layout": @"cover"}];
+                               @{@"title": @"Title", @"subtitle": @"Subtitle", @"layout": @"cover"},
+                               @{@"content": @"这里应有很多字", @"layout": @"detail"},
+                               @{@"items": @[@"第一项", @"第二项"], @"layout": @"list"},
+                               @{@"title": @"The End", @"layout": @"end"}];
     
     
     NSMutableArray *dataArray = [NSMutableArray array];
     for (NSDictionary *item in dataDictArray) {
+        DDBaseData *data = nil;
         if ([item[@"layout"] isEqualToString:@"cover"]) {
-            DDCoverData *data = [[DDCoverData alloc] initWithDictionary:item error:nil];
+            data = [[DDCoverData alloc] initWithDictionary:item error:nil];
+        } else if ([item[@"layout"] isEqualToString:@"end"]) {
+            data = [[DDEndData alloc] initWithDictionary:item error:nil];
+        } else if ([item[@"layout"] isEqualToString:@"detail"]) {
+            data = [[DDDetailData alloc] initWithDictionary:item error:nil];
+        } else if ([item[@"layout"] isEqualToString:@"list"]) {
+            data = [[DDListData alloc] initWithDictionary:item error:nil];
+        } else if ([item[@"layout"] isEqualToString:@""]) {
+        }
+        if (data != nil) {
             [dataArray addObject:data];
         }
     }

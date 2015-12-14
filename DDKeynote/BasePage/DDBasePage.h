@@ -21,5 +21,7 @@
 
 - (instancetype)initWithDataArray:(NSArray *)dataArray;
 
+- (void)configConstraints;
 - (void)loadData;
+
 @end

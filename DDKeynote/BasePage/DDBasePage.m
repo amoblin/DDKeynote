@@ -39,6 +39,12 @@
     [self addNextPageAction];
 
     [self loadData];
+    [self configConstraints];
+}
+
+- (void)configConstraints;
+{
+    // do nothing
 }
 
 - (void)didReceiveMemoryWarning {

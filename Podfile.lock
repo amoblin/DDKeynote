@@ -8,15 +8,18 @@ PODS:
   - ReactiveCocoa/no-arc (2.5)
   - ReactiveCocoa/UI (2.5):
     - ReactiveCocoa/Core
+  - SVProgressHUD (1.1)
 
 DEPENDENCIES:
   - JSONModel
   - Masonry
   - ReactiveCocoa
+  - SVProgressHUD
 
 SPEC CHECKSUMS:
   JSONModel: 216584d0311b053ff714f1d6cb700dbf890847bc
   Masonry: ff105a956abcd19a618b2028b121cb638d7a8e2f
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
+  SVProgressHUD: 54de4d9ab38aa3f688da401f5766a5738084e7fb
 
 COCOAPODS: 0.39.0
