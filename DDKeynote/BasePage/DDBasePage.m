@@ -17,7 +17,9 @@
 
 @property (nonatomic, strong) NSArray *dataArray;
 
-@property (nonatomic, strong) UILabel *label;
+@property (nonatomic, strong) UILabel *titleLabel;
+
+@property (nonatomic, strong) UILabel *footerLabel;
 
 @end
 
@@ -47,13 +49,21 @@
 - (void)loadView;
 {
     [super loadView];
-    self.label = [UILabel labelWithFont:[UIFont systemFontOfSize:10] textColor:[UIColor lightGrayColor]];
-    [self.view addSubview:self.label];
+    self.titleLabel = [UILabel labelWithFont:[UIFont systemFontOfSize:38] textColor:[UIColor blackColor]];
+    self.titleLabel.textAlignment = NSTextAlignmentCenter;
+    [self.view addSubview:self.titleLabel];
+
+    self.footerLabel = [UILabel labelWithFont:[UIFont systemFontOfSize:10] textColor:[UIColor lightGrayColor]];
+    [self.view addSubview:self.footerLabel];
 }
 
 - (void)configConstraints;
 {
-    [self.label mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(64);
+        make.centerX.equalTo(self.view);
+    }];
+    [self.footerLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.right.mas_equalTo(-20);
         make.bottom.mas_equalTo(-15);
     }];
@@ -140,10 +150,11 @@
 
 - (void)loadData;
 {
-    NSInteger index = [self.navigationController.viewControllers indexOfObject:self];
+    self.titleLabel.text = self.data.title;
 
+    NSInteger index = [self.navigationController.viewControllers indexOfObject:self];
     NSString *info = [NSString stringWithFormat:@"%@-%@", @(self.dataArray.count), @(index+1)];
-    self.label.text = info;
+    self.footerLabel.text = info;
 }
 
 @end

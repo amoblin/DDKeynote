@@ -49,7 +49,7 @@
         UIView *label = array[1];
         [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(20);
-            make.top.mas_equalTo(64 + 30 * i);
+            make.top.mas_equalTo(130 + 30 * i);
         }];
         [label mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(imageView.mas_right).with.offset(5);

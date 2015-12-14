@@ -53,7 +53,7 @@
     if (self.data == nil) {
         return;
     }
-    self.titleLabel.text = @"Q&A";
+    self.titleLabel.text = ((DDEndData *)self.data).contentTitle;
 }
 
 @end

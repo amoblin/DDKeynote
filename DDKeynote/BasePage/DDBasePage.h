@@ -13,11 +13,13 @@
 
 @interface DDBaseData : JSONModel
 
+@property (nonatomic, strong) NSString *title;
+
 @end
 
 @interface DDBasePage : UIViewController
 
-@property (nonatomic, strong) id data;
+@property (nonatomic, strong) DDBaseData *data;
 
 - (instancetype)initWithDataArray:(NSArray *)dataArray;
 

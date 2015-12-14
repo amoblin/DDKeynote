@@ -10,6 +10,8 @@
 
 @interface DDEndData : DDBaseData
 
+@property (nonatomic, strong) NSString *contentTitle;
+
 @end
 
 @interface DDEndPage : DDBasePage

@@ -21,10 +21,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     NSArray *dataDictArray = @[
-                               @{@"title": @"Title", @"subtitle": @"Subtitle", @"layout": @"cover"},
-                               @{@"content": @"这里应有很多字", @"layout": @"detail"},
-                               @{@"items": @[@"第一项", @"第二项"], @"layout": @"list"},
-                               @{@"title": @"The End", @"layout": @"end"}];
+                               @{@"title": @"", @"contentTitle": @"Title", @"subtitle": @"Subtitle", @"layout": @"cover"},
+                               @{@"title": @"此处应有标题", @"content": @"这里应有很多字", @"layout": @"detail"},
+                               @{@"title": @"此处应有掌声", @"items": @[@"第一项", @"第二项"], @"layout": @"list"},
+                               @{@"title": @"", @"contentTitle": @"The End", @"layout": @"end"}];
     
     
     NSMutableArray *dataArray = [NSMutableArray array];

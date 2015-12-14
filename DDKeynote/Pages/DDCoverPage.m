@@ -72,7 +72,7 @@
     }
 
     DDCoverData *data = (DDCoverData *)self.data;
-    self.titleLabel.text = data.title;
+    self.titleLabel.text = data.contentTitle;
     self.subtitleLabel.text = data.subtitle;
 }
 

@@ -10,7 +10,7 @@
 
 @interface DDCoverData : DDBaseData
 
-@property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) NSString *contentTitle;
 @property (nonatomic, strong) NSString *subtitle;
 
 @end
