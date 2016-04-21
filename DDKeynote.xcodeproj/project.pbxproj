@@ -22,6 +22,7 @@
 		DA5F129C1C1E296B00EF1261 /* DDBasePage.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5F129B1C1E296B00EF1261 /* DDBasePage.m */; };
 		DA5F12A41C1E2B2800EF1261 /* DDCoverPage.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5F12A31C1E2B2800EF1261 /* DDCoverPage.m */; };
 		DA5F12A81C1E2B5400EF1261 /* UILabel+WA.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5F12A71C1E2B5400EF1261 /* UILabel+WA.m */; };
+		DAD0E2F21C317EEC001AF617 /* DDImagePage.m in Sources */ = {isa = PBXBuildFile; fileRef = DAD0E2F11C317EEC001AF617 /* DDImagePage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,8 @@
 		DA5F12A31C1E2B2800EF1261 /* DDCoverPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCoverPage.m; sourceTree = "<group>"; };
 		DA5F12A61C1E2B5400EF1261 /* UILabel+WA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+WA.h"; sourceTree = "<group>"; };
 		DA5F12A71C1E2B5400EF1261 /* UILabel+WA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+WA.m"; sourceTree = "<group>"; };
+		DAD0E2F01C317EEC001AF617 /* DDImagePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDImagePage.h; sourceTree = "<group>"; };
+		DAD0E2F11C317EEC001AF617 /* DDImagePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDImagePage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +206,8 @@
 				DA2729571C1E3C1700BFBF01 /* DDDetailPage.m */,
 				DA2729591C1E3C2800BFBF01 /* DDListPage.h */,
 				DA27295A1C1E3C2800BFBF01 /* DDListPage.m */,
+				DAD0E2F01C317EEC001AF617 /* DDImagePage.h */,
+				DAD0E2F11C317EEC001AF617 /* DDImagePage.m */,
 				DA27295C1C1E3C3300BFBF01 /* DDEndPage.h */,
 				DA27295D1C1E3C3300BFBF01 /* DDEndPage.m */,
 			);
@@ -401,6 +406,7 @@
 			files = (
 				DA27295B1C1E3C2800BFBF01 /* DDListPage.m in Sources */,
 				DA5F126A1C1E288600EF1261 /* ViewController.m in Sources */,
+				DAD0E2F21C317EEC001AF617 /* DDImagePage.m in Sources */,
 				DA27295E1C1E3C3300BFBF01 /* DDEndPage.m in Sources */,
 				DA5F12671C1E288600EF1261 /* AppDelegate.m in Sources */,
 				DA5F12A81C1E2B5400EF1261 /* UILabel+WA.m in Sources */,

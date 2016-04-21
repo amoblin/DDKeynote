@@ -12,5 +12,6 @@ pod "ReactiveCocoa"
 pod "Masonry"
 pod "JSONModel"
 pod "SVProgressHUD"
+pod "AFNetworking"
 
 use_frameworks!
